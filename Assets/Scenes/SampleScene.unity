@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 1852512074}
   - component: {fileID: 1852512073}
   - component: {fileID: 1852512072}
+  - component: {fileID: 1852512075}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -561,6 +562,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 20.253, y: 52.74, z: -5.589}
+--- !u!114 &1852512075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852512071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219d544fd9be72f45b1a7b6b81133e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputNumber: 0
+  inputFloat: 0
+  inputtext: "eredmeny\xC9: 0 "
+  inputBool: 0
 --- !u!1 &2014954691
 GameObject:
   m_ObjectHideFlags: 0
