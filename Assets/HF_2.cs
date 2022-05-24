@@ -18,11 +18,11 @@ public class HF_2 : MonoBehaviour
                 {
                     Debug.Log("fizzbuzz");
                 }
-                if (counter % 3 == 0)
+                else if (counter % 3 == 0)
                 {
                     Debug.Log("fizz");
                 }
-                if (counter % 5 == 0)
+                else if (counter % 5 == 0)
                 {
                     Debug.Log("buzz");
                 }
@@ -32,8 +32,6 @@ public class HF_2 : MonoBehaviour
             {
                 Debug.Log(counter.ToString());
             }
-
-
             counter++;
         }
 
