@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField, Range( 0.01f,2)] float speed;
+    [SerializeField, Range( 0.01f,15)] float speed;
     [SerializeField] float angularSpeed;
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
         float z = up ? 1 : (down ? -1 : 0);
 
         Vector3 inputVector = new Vector3 (x, 0, z);
-        Debug.Log(inputVector);
+      //  Debug.Log(inputVector);
         // delta time azért kell mert nem függ az FPS tõl a cucc A normalizált azért
         // kell mert ha átlósan megyünk akkor így fog menni olyan sebességel, hogy megfelelõen minden irányban. 
         
