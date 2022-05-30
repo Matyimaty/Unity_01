@@ -11,7 +11,9 @@ public class PathMovingObstacke : MonoBehaviour
     [SerializeField ,Range(0,1)] float t;
 
     float time;
-    bool up; 
+    bool up;
+    bool positiv = false;
+    bool negativ = false;
     // Update is called once per frame
 
 
@@ -39,6 +41,26 @@ public class PathMovingObstacke : MonoBehaviour
                 up = true;
             }
         }
+
+
+        /// HF 
+        /// 
+       
+        Vector3 actualPosition = transform.position;
+        if (actualPosition.y <0 && !negativ)
+        {
+            Debug.Log("Cross Zero-");
+            negativ = true;
+            positiv = false;
+        }
+        if (actualPosition.y >0 && !positiv)
+        {
+            positiv = true;
+            negativ = false;
+            Debug.Log("Cross Zero+");
+        }
+
+
         UpdatePosition();
     }
 
@@ -54,5 +76,6 @@ public class PathMovingObstacke : MonoBehaviour
     private void UpdatePosition()
     {
         transform.position = Vector3.Lerp(point1.position, point2.position, t);
+
     }
 }
