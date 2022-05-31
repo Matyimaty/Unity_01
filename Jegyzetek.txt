@@ -1,0 +1,5 @@
+Ütközés detektálás
+Collider 
+Rigidbody
+iskinematik
+Collider (Istriggered)

@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+
+    [SerializeField] KeyCode leftK;
+    [SerializeField] KeyCode rightK;
+    [SerializeField] KeyCode upK;
+    [SerializeField] KeyCode downK;
     [SerializeField, Range( 0.01f,15)] float speed;
     [SerializeField] float angularSpeed;
+
 
     // Update is called once per frame
     void Update()
     {
-        bool right = Input.GetKey(KeyCode.RightArrow);
-        bool left = Input.GetKey(KeyCode.LeftArrow);
-        bool up = Input.GetKey(KeyCode.UpArrow);
-        bool down = Input.GetKey(KeyCode.DownArrow);
+        bool right = Input.GetKey(rightK);
+        bool left = Input.GetKey(leftK);
+        bool up = Input.GetKey(upK);
+        bool down = Input.GetKey(downK);
 
         float x = right ? 1 : (left ? -1 : 0);
         float z = up ? 1 : (down ? -1 : 0);

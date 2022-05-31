@@ -15,7 +15,7 @@ public class Damager : MonoBehaviour
         Damagable damagable =  other.GetComponent<Damagable>();
         if (damagable != null)
         {
-            Debug.Log($"Collison {damagable.name}");
+           // Debug.Log($"Collison {damagable.name}");
             damagable.Damage(damage);
         }
     }
