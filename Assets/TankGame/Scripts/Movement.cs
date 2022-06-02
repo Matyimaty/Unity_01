@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
+    [Header("moving")]
     [SerializeField] KeyCode leftK;
     [SerializeField] KeyCode rightK;
     [SerializeField] KeyCode upK;
@@ -12,10 +13,20 @@ public class Movement : MonoBehaviour
     [SerializeField, Range( 0.01f,15)] float speed;
     [SerializeField] float angularSpeed;
 
+    [Header("shooting")]
+    [SerializeField] KeyCode shootKey;
+    [SerializeField] GameObject projectilePrototype;
+    [SerializeField] Transform shootingPosition;
+
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(shootKey))
+        {
+            Shoot();
+        }
+
         bool right = Input.GetKey(rightK);
         bool left = Input.GetKey(leftK);
         bool up = Input.GetKey(upK);
@@ -60,5 +71,16 @@ public class Movement : MonoBehaviour
 
 
 
+    }
+
+    private void Shoot()
+    {
+        // Példányosít létre hoz egy új objektumot.
+        GameObject newGameObject = Instantiate(projectilePrototype);
+        newGameObject.transform.position = shootingPosition.position;
+        newGameObject.transform.rotation = shootingPosition.rotation;
+
+
+        Debug.Log("BangBang");
     }
 }
