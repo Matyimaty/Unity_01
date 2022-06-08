@@ -937,13 +937,13 @@ MonoBehaviour:
   - {fileID: 317597320}
   - {fileID: 547227841}
   resetPosition:
-  - {fileID: 199540689}
   - {fileID: 100771995}
-  - {fileID: 1063703720}
+  - {fileID: 199540689}
   - {fileID: 720690954}
-  - {fileID: 1695241839}
-  - {fileID: 1560186588}
   - {fileID: 776544431}
+  - {fileID: 1063703720}
+  - {fileID: 1560186588}
+  - {fileID: 1695241839}
 --- !u!114 &547227841 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2831171131377436639, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
@@ -3180,10 +3180,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 3.5988736
-      value: 4.2685804
-      inSlope: -0.26774478
-      outSlope: -0.26774478
+      time: 3.480515
+      value: 4.078822
+      inSlope: -0.08845833
+      outSlope: -0.08845833
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
@@ -3191,8 +3191,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 4.715679
       value: 3.9695616
-      inSlope: -0.13511324
-      outSlope: -0.13511324
+      inSlope: -0.045470018
+      outSlope: -0.045470018
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -3200,17 +3200,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 8.151925
       value: 3.9610338
-      inSlope: 0.031386252
-      outSlope: 0.031386252
+      inSlope: 0.011275235
+      outSlope: 0.011275235
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 13.067627
-      value: 4.281804
-      inSlope: 0.06525421
-      outSlope: 0.06525421
+      time: 13.422699
+      value: 4.0929728
+      inSlope: 0.025032176
+      outSlope: 0.025032176
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
