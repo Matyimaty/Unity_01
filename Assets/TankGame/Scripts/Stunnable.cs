@@ -6,6 +6,7 @@ public class Stunnable : MonoBehaviour
 {
 
     [SerializeField] float timeStunSec = 5;
+    [SerializeField] Behaviour componentStopMovingOn;
 
     float startTime;
     bool stun;
@@ -28,7 +29,7 @@ public class Stunnable : MonoBehaviour
 
                 stun = false;
                 this.gameObject.GetComponent<Collider>().enabled = true;
-
+                componentStopMovingOn.enabled = true;
 
 
             }
@@ -45,8 +46,10 @@ public class Stunnable : MonoBehaviour
             stun = true;
             startTime = Time.time;
             Destroy(other.gameObject);
-           
-            
+            componentStopMovingOn.enabled = false;
+
+
+
 
         }
 
@@ -60,5 +63,6 @@ public class Stunnable : MonoBehaviour
     public bool Stunned()
     {
         return stun;
+        Debug.Log("aaaaaaaaaaaaaaaaaaa");
     }
 }
