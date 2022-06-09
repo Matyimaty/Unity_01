@@ -7,6 +7,7 @@ public class Stunnable : MonoBehaviour
 
     [SerializeField] float timeStunSec = 5;
     [SerializeField] Behaviour componentStopMovingOn;
+    [SerializeField] new ParticleSystem particleSystem;
 
     float startTime;
     bool stun;
@@ -47,7 +48,7 @@ public class Stunnable : MonoBehaviour
             startTime = Time.time;
             Destroy(other.gameObject);
             componentStopMovingOn.enabled = false;
-
+            particleSystem.Play();
 
 
 
@@ -59,10 +60,5 @@ public class Stunnable : MonoBehaviour
         // blokkable tipusok leállnak! az enemyre kell ráhúzni ezt a cuccost!
         // ha letelik az idõ akkor újra 
         // kolider kikapcsolása ilyenkore ne tudjanak sebezni
-    }
-    public bool Stunned()
-    {
-        return stun;
-        Debug.Log("aaaaaaaaaaaaaaaaaaa");
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameOverScreen : MonoBehaviour
 {
@@ -45,6 +46,8 @@ public class GameOverScreen : MonoBehaviour
     }
     public void Restart()
     {
+        // FONTOS!!!!!!!! 
+        EventSystem.current.SetSelectedGameObject(null); //<-- fontos hogy ha reset képernyõ van akkor a gomb focusba kerül 
         for (int i = 0; i < damagable.Length; i++)
         {
             damagable[i].Resurrect();
@@ -53,7 +56,8 @@ public class GameOverScreen : MonoBehaviour
 
         for (int i = 0; i < resetPosition.Length; i++)
         {
-            resetPosition[i].restart();
+            ResetPosition resetPos = resetPosition[i];
+            resetPos.restart();
         }
 
 

@@ -2,14 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
+    // GamePadHasználathoz!! 
     [Header("moving")]
-    [SerializeField] KeyCode leftK;
+
+    [SerializeField] PlayerInput input;
+   /* [SerializeField] KeyCode leftK;
     [SerializeField] KeyCode rightK;
     [SerializeField] KeyCode upK;
-    [SerializeField] KeyCode downK;
+    [SerializeField] KeyCode downK;*/
+
+
     [SerializeField, Range( 0.01f,15)] float speed;
     [SerializeField] float angularSpeed;
 
@@ -18,30 +24,38 @@ public class Movement : MonoBehaviour
     [SerializeField] GameObject projectilePrototype;
     [SerializeField] Transform shootingPosition;
 
+    InputAction movementAction;
 
+     void Start()
+    {
+        movementAction = input.currentActionMap.FindAction("Movement");
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(shootKey))
+      /*  if (Input.GetKeyDown(shootKey))
         {
             Shoot();
-        }
+        }*/
+        /*
+                bool right = Input.GetKey(rightK);
+                bool left = Input.GetKey(leftK);
+                bool up = Input.GetKey(upK);
+                bool down = Input.GetKey(downK);
 
-        bool right = Input.GetKey(rightK);
-        bool left = Input.GetKey(leftK);
-        bool up = Input.GetKey(upK);
-        bool down = Input.GetKey(downK);
+                float x = right ? 1 : (left ? -1 : 0);
+                float z = up ? 1 : (down ? -1 : 0);
 
-        float x = right ? 1 : (left ? -1 : 0);
-        float z = up ? 1 : (down ? -1 : 0);
+                Vector3 inputVector = new Vector3 (x, 0, z);
+        */
 
-        Vector3 inputVector = new Vector3 (x, 0, z);
+        Vector3 inputVector = movementAction.ReadValue<Vector3>();
       //  Debug.Log(inputVector);
-        // delta time azért kell mert nem függ az FPS tõl a cucc A normalizált azért
-        // kell mert ha átlósan megyünk akkor így fog menni olyan sebességel, hogy megfelelõen minden irányban. 
-        
-        
-        
+      // delta time azért kell mert nem függ az FPS tõl a cucc A normalizált azért
+      // kell mert ha átlósan megyünk akkor így fog menni olyan sebességel, hogy megfelelõen minden irányban. 
+
+
+
         // Queaterion arra néz a karakter amerre megy! 
         if (inputVector != Vector3.zero)
         {
@@ -73,7 +87,7 @@ public class Movement : MonoBehaviour
 
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         // Példányosít létre hoz egy új objektumot.
         GameObject newGameObject = Instantiate(projectilePrototype);

@@ -893,6 +893,7 @@ GameObject:
   - component: {fileID: 2831171132066537722}
   - component: {fileID: 2831171132066537721}
   - component: {fileID: 6486774220867906744}
+  - component: {fileID: 1661704701208980286}
   m_Layer: 0
   m_Name: Player_1
   m_TagString: Untagged
@@ -929,10 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd57e26972efc694ca0560b3e09f776d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftK: 276
-  rightK: 275
-  upK: 273
-  downK: 274
+  input: {fileID: 1661704701208980286}
   speed: 5
   angularSpeed: 360
   shootKey: 8
@@ -950,6 +948,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad73ad27b6381747a3a01987623da8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1661704701208980286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831171132066537723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 4a14c2f08a648f442a674531a4478fb3, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4b9df30e-db0e-4c11-9383-7be1923fefe4
+    m_ActionName: PlayerInput/Movement[/Keyboard/a,/Keyboard/d,/Keyboard/w,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2c843234-3012-4d76-84a9-8489a349a417
+    m_ActionName: PlayerInput/Shooting[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerInput
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &7904523222686806620
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +1010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7904523222686806620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.667, z: 0.787}
+  m_LocalPosition: {x: 0, y: 0.37, z: 0.787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

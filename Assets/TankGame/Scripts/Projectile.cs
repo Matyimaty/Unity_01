@@ -31,5 +31,13 @@ public class Projectile : MonoBehaviour
 
 
     }
-    
+    private void OnTriggerEnter(Collider other) // rigidbody iskinematik arra jó hogy mi  szaályozzuk a pozícióját, fizikaiba belszámolja a game objectet 
+    {
+        Blockable b = other.GetComponentInParent<Blockable>();
+        if (b!=null)
+        {
+            b.Block();
+        }
+    }
+
 }
