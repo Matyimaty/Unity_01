@@ -49,7 +49,7 @@ public class PathMovingObstacke : MonoBehaviour
         Vector3 actualPosition = transform.position;
         if (actualPosition.y <0 && !negativ)
         {
-            Debug.Log("Cross Zero-");
+           // Debug.Log("Cross Zero-");
             negativ = true;
             positiv = false;
         }
@@ -57,7 +57,7 @@ public class PathMovingObstacke : MonoBehaviour
         {
             positiv = true;
             negativ = false;
-            Debug.Log("Cross Zero+");
+          //  Debug.Log("Cross Zero+");
         }
 
 

@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 100771994}
   - component: {fileID: 100771993}
   - component: {fileID: 100771995}
+  - component: {fileID: 100771996}
   m_Layer: 0
   m_Name: EnemyBig
   m_TagString: Untagged
@@ -390,6 +391,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad73ad27b6381747a3a01987623da8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &100771996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100771992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185932258c663c746866b2318ec28b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStunSec: 5
 --- !u!1001 &122300174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,6 +521,7 @@ GameObject:
   - component: {fileID: 236437246}
   - component: {fileID: 236437245}
   - component: {fileID: 236437244}
+  - component: {fileID: 236437248}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -608,6 +623,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236437242}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &236437248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236437242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185932258c663c746866b2318ec28b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStunSec: 5
 --- !u!114 &317597320 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2831171131377436639, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
@@ -1215,6 +1243,7 @@ GameObject:
   - component: {fileID: 720690952}
   - component: {fileID: 720690953}
   - component: {fileID: 720690954}
+  - component: {fileID: 720690955}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1305,6 +1334,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad73ad27b6381747a3a01987623da8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &720690955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720690951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185932258c663c746866b2318ec28b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStunSec: 5
 --- !u!1 &739060389
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,6 +3198,7 @@ GameObject:
   - component: {fileID: 1695241838}
   - component: {fileID: 1695241837}
   - component: {fileID: 1695241839}
+  - component: {fileID: 1695241840}
   m_Layer: 0
   m_Name: EnemySlim
   m_TagString: Untagged
@@ -3246,6 +3289,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad73ad27b6381747a3a01987623da8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1695241840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695241836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185932258c663c746866b2318ec28b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStunSec: 5
 --- !u!1 &1728016650
 GameObject:
   m_ObjectHideFlags: 0
