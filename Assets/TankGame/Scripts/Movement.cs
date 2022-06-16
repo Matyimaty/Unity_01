@@ -9,34 +9,33 @@ public class Movement : MonoBehaviour
     // GamePadHasználathoz!! 
     [Header("moving")]
 
-    [SerializeField] PlayerInput input;
+    [SerializeField] Player_Input input;
    /* [SerializeField] KeyCode leftK;
     [SerializeField] KeyCode rightK;
     [SerializeField] KeyCode upK;
     [SerializeField] KeyCode downK;*/
+ 
 
 
     [SerializeField, Range( 0.01f,15)] float speed;
     [SerializeField] float angularSpeed;
 
-    [Header("shooting")]
-    [SerializeField] KeyCode shootKey;
-    [SerializeField] GameObject projectilePrototype;
-    [SerializeField] Transform shootingPosition;
+   
 
-    InputAction movementAction;
 
-     void Start()
-    {
-        movementAction = input.currentActionMap.FindAction("Movement");
-    }
     // Update is called once per frame
     void Update()
     {
-      /*  if (Input.GetKeyDown(shootKey))
-        {
-            Shoot();
-        }*/
+        HandleMovement();
+       // HandleJumping();
+    }
+
+    void HandleMovement()
+    {
+        /*  if (Input.GetKeyDown(shootKey))
+                  {
+                      Shoot();
+                  }*/
         /*
                 bool right = Input.GetKey(rightK);
                 bool left = Input.GetKey(leftK);
@@ -49,24 +48,24 @@ public class Movement : MonoBehaviour
                 Vector3 inputVector = new Vector3 (x, 0, z);
         */
 
-        Vector3 inputVector = movementAction.ReadValue<Vector3>();
-      //  Debug.Log(inputVector);
-      // delta time azért kell mert nem függ az FPS tõl a cucc A normalizált azért
-      // kell mert ha átlósan megyünk akkor így fog menni olyan sebességel, hogy megfelelõen minden irányban. 
+
+        //  Debug.Log(inputVector);
+        // delta time azért kell mert nem függ az FPS tõl a cucc A normalizált azért
+        // kell mert ha átlósan megyünk akkor így fog menni olyan sebességel, hogy megfelelõen minden irányban. 
 
 
-
+        Vector3 inputVector = input.movementVector;
         // Queaterion arra néz a karakter amerre megy! 
         if (inputVector != Vector3.zero)
         {
             transform.position += inputVector.normalized * Time.deltaTime * speed;
-           
+
             Quaternion tartgetRotation = Quaternion.LookRotation(inputVector);
-           // transform.rotation = Quaternion.LookRotation(inputVector);
-            Quaternion resultRotation =  Quaternion.RotateTowards(transform.rotation, tartgetRotation, angularSpeed *Time.deltaTime);
-            transform.rotation = resultRotation; 
+            // transform.rotation = Quaternion.LookRotation(inputVector);
+            Quaternion resultRotation = Quaternion.RotateTowards(transform.rotation, tartgetRotation, angularSpeed * Time.deltaTime);
+            transform.rotation = resultRotation;
         }
-        
+
 
         /*
                 if (right)
@@ -79,22 +78,6 @@ public class Movement : MonoBehaviour
                 if (down)
                     transform.position += new Vector3(0, 0, -0.01f);
         */
-
-
-
-
-
-
     }
 
-    public void Shoot()
-    {
-        // Példányosít létre hoz egy új objektumot.
-        GameObject newGameObject = Instantiate(projectilePrototype);
-        newGameObject.transform.position = shootingPosition.position;
-        newGameObject.transform.rotation = shootingPosition.rotation;
-
-
-        Debug.Log("BangBang");
-    }
 }

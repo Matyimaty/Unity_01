@@ -433,7 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 0}
   starthealth: 5
-  componentToTurnOn: {fileID: 2831171132066537721}
+  componentToTurnOn: {fileID: 7877677870697556698}
   health: 5
 --- !u!54 &2831171131377436638
 Rigidbody:
@@ -891,9 +891,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2831171132066537722}
-  - component: {fileID: 2831171132066537721}
   - component: {fileID: 6486774220867906744}
   - component: {fileID: 1661704701208980286}
+  - component: {fileID: 4632919685957827698}
+  - component: {fileID: 8173177636305808926}
+  - component: {fileID: 7877677870697556698}
+  - component: {fileID: 250966822946943138}
+  - component: {fileID: 4633087434799880169}
   m_Layer: 0
   m_Name: Player_1
   m_TagString: Untagged
@@ -918,24 +922,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2831171132066537721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2831171132066537723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd57e26972efc694ca0560b3e09f776d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 1661704701208980286}
-  speed: 5
-  angularSpeed: 360
-  shootKey: 8
-  projectilePrototype: {fileID: 4583270081723602096, guid: 6f283b10a0da92a41a153f6db48a3722, type: 3}
-  shootingPosition: {fileID: 8435859106685836060}
 --- !u!114 &6486774220867906744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,6 +972,85 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerInput
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4632919685957827698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831171132066537723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c3d0334f842054786cbad30f481cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 1661704701208980286}
+  movementVector: {x: 0, y: 0, z: 0}
+  shoot: 0
+  jump: 0
+--- !u!114 &8173177636305808926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831171132066537723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e357b26b929143243a4d061da7e3529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 4632919685957827698}
+  projectilePrototype: {fileID: 4583270081723602096, guid: 6f283b10a0da92a41a153f6db48a3722, type: 3}
+  shootingPosition: {fileID: 8435859106685836060}
+--- !u!114 &7877677870697556698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831171132066537723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ffd4c509a0c0294e8c575dee8766205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 4632919685957827698}
+  rgbd: {fileID: 250966822946943138}
+  acceleration: 100
+  maxSpeed: 15
+  angularSpeed: 720
+  jumpVelocity: 10
+--- !u!54 &250966822946943138
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831171132066537723}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0.15
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!136 &4633087434799880169
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831171132066537723}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0.3}
 --- !u!1 &7904523222686806620
 GameObject:
   m_ObjectHideFlags: 0
