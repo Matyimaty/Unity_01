@@ -417,7 +417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd228a87c9d29f42b96c1cf501997f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followable: {fileID: 776544429}
+  followables:
+  - {fileID: 776544429}
+  - {fileID: 2042237377}
   speedFunction:
     serializedVersion: 2
     m_Curve:
@@ -522,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 250966822946943138, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: m_Constraints
-      value: 112
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 250966822946943138, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: m_CollisionDetection
@@ -638,10 +640,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7877677870697556698, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877677870697556698, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: acceleration
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7877677870697556698, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
@@ -1674,7 +1672,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd228a87c9d29f42b96c1cf501997f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followable: {fileID: 776544429}
+  followables:
+  - {fileID: 776544429}
+  - {fileID: 2042237377}
   speedFunction:
     serializedVersion: 2
     m_Curve:
@@ -3821,7 +3821,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd228a87c9d29f42b96c1cf501997f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followable: {fileID: 776544429}
+  followables:
+  - {fileID: 776544429}
+  - {fileID: 2042237377}
   speedFunction:
     serializedVersion: 2
     m_Curve:
@@ -4840,6 +4842,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffd4c509a0c0294e8c575dee8766205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2042237377 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2831171132066537722, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
+  m_PrefabInstance: {fileID: 122300174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2056511327
 GameObject:
   m_ObjectHideFlags: 0
@@ -5465,6 +5472,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 250966822946943138, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 250966822946943138, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
@@ -5547,14 +5558,6 @@ PrefabInstance:
     - target: {fileID: 2831171132066537723, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: m_Name
       value: Player_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877677870697556698, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: maxSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877677870697556698, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: acceleration
-      value: 64.1
       objectReference: {fileID: 0}
     - target: {fileID: 7877677870697556698, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: angularSpeed
