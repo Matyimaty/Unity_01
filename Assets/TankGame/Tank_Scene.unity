@@ -5471,42 +5471,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 250966822946943138, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 250966822946943138, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661704701208980286, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661704701208980286, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661704701208980286, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661704701208980286, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661704701208980286, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Shoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661704701208980286, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Movement, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661704701208980286, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2831171131377436639, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: healthText
       value: 
@@ -5558,10 +5522,6 @@ PrefabInstance:
     - target: {fileID: 2831171132066537723, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: m_Name
       value: Player_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877677870697556698, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
-      propertyPath: angularSpeed
-      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 9007617410959230292, guid: 4ccccdc9c80765d408d84560660522f5, type: 3}
       propertyPath: scoreText

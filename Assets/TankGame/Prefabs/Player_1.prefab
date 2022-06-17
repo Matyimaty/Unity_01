@@ -967,6 +967,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 2c843234-3012-4d76-84a9-8489a349a417
     m_ActionName: PlayerInput/Shooting[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57cef6b9-d49a-4032-ad1c-f7bd33f2641f
+    m_ActionName: PlayerInput/Jumping[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 51b4f97e-05ec-47b5-a359-1686c3671c76
+    m_ActionName: PlayerInput/Turning[/Keyboard/OEM1,/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerInput
@@ -988,6 +996,7 @@ MonoBehaviour:
   movementVector: {x: 0, y: 0, z: 0}
   shoot: 0
   jump: 0
+  turn: 0
 --- !u!114 &8173177636305808926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,6 +1012,8 @@ MonoBehaviour:
   input: {fileID: 4632919685957827698}
   projectilePrototype: {fileID: 4583270081723602096, guid: 6f283b10a0da92a41a153f6db48a3722, type: 3}
   shootingPosition: {fileID: 8435859106685836060}
+  projectileCount: 3
+  projectileDelay: 0.1
 --- !u!114 &7877677870697556698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,7 +1030,7 @@ MonoBehaviour:
   rgbd: {fileID: 250966822946943138}
   acceleration: 100
   maxSpeed: 15
-  angularSpeed: 720
+  angularSpeed: 700
   jumpVelocity: 10
 --- !u!54 &250966822946943138
 Rigidbody:
@@ -1035,7 +1046,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!136 &4633087434799880169
 CapsuleCollider:
